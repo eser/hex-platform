@@ -1,0 +1,17 @@
+---
+apiVersion: install.istio.io/v1alpha1
+kind: IstioOperator
+metadata:
+  namespace: istio-system
+  name: istio-controlplane
+spec:
+  profile: demo
+  components:
+    telemetry:
+      enabled: false
+  addonComponents:
+    grafana:
+      enabled: true
+    kiali:
+      enabled: true
+...
