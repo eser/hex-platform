@@ -1,0 +1,6 @@
+dependencies:
+- name: ambassador
+  repository: https://getambassador.io/helm
+  version: 6.2.0
+digest: sha256:de8dc94e1546a45d31486c27f7fa4c4a46b0e169c1262741f62a8d8b70a26989
+generated: "2020-03-15T03:23:49.6099067+03:00"
