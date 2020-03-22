@@ -1,0 +1,22 @@
+# OS metadata
+.DS_Store
+Thumbs.db
+
+# Editor metadata
+.vscode/
+*.swp
+
+# Codebase specific
+# helm-samples/
+**/charts/*.tgz
+
+# terraform
+**/.terraform/*
+*.tfstate
+*.tfstate.*
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Codebase-specific

@@ -1,0 +1,7 @@
+# Default values for hex-common-istio-operator.
+
+# istio:
+#   grafana:
+#     enabled: true
+#   kiali:
+#     enabled: true
