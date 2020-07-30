@@ -1,6 +1,6 @@
 apiVersion: v2
-name: hex-common-ambassador-ingress
-description: Ambassador Ingress Chart for acik-kaynak.org Projects
+name: hex-common-ambassador
+description: Ambassador Chart for Hex Platform Projects
 
 # A chart can be either an 'application' or a 'library' chart.
 #
@@ -22,9 +22,9 @@ appVersion: 1.0.0
 
 # Chart dependencies
 dependencies:
-  - name: ambassador
-    version: 6.2.0
-    repository: https://getambassador.io/helm
+  # - name: ambassador-operator
+  #   version: 0.1.0
+  #   repository: https://getambassador.io
 
 # Chart maintainer
 maintainers:

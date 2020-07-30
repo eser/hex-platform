@@ -1,8 +1,0 @@
-# Default values for hex-common-ambassador-ingress.
-
-ambassador:
-  nameOverride: ambassador
-  namespace:
-    name: hex-common
-  autoscaling:
-    enabled: false

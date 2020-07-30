@@ -1,0 +1,17 @@
+---
+apiVersion: getambassador.io/v2
+kind: AmbassadorInstallation
+metadata:
+  name: ambassador
+spec:
+  version: '1.*'
+  helmValues:
+    namespace.name: ambassador
+    enableAES: true
+    crds.keep: false
+    autoscaling.enabled: true
+    autoscaling.minReplicas: 2
+    autoscaling.maxReplicas: 6
+    # autoscaling.metrics:
+    metrics.serviceMonitor.enabled: true
+...
