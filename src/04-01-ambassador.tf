@@ -13,27 +13,27 @@ resource "helm_release" "ambassador" {
 
   set {
     name  = "enableAES"
-    value = false
+    value = "true"
   }
 
   set {
     name  = "crds.keep"
-    value = false
+    value = "false"
   }
 
   set {
     name  = "autoscaling.enabled"
-    value = true
+    value = "true"
   }
 
   set {
     name  = "autoscaling.minReplicas"
-    value = 2
+    value = "2"
   }
 
   set {
     name  = "autoscaling.maxReplicas"
-    value = 6
+    value = "6"
   }
 
   # set {
@@ -43,6 +43,16 @@ resource "helm_release" "ambassador" {
 
   set {
     name  = "metrics.serviceMonitor.enabled"
-    value = true
+    value = "true"
+  }
+
+  set {
+    name  = "redis.create"
+    value = "true"
+  }
+
+  set {
+    name  = "service.type"
+    value = "LoadBalancer"
   }
 }

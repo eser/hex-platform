@@ -30,16 +30,16 @@ resource "helm_release" "linkerd" {
 
   set {
     name  = "prometheus.enabled"
-    value = true
+    value = "true"
   }
 
   set {
     name  = "grafana.enabled"
-    value = true
+    value = "true"
   }
 
   set {
     name  = "tracing.enabled"
-    value = true
+    value = "true"
   }
 }
