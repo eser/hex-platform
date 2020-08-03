@@ -1,4 +1,4 @@
-resource "null_resource" "linkerd-bindings" {
+resource "null_resource" "component-bindings" {
   depends_on = [
     helm_release.linkerd,
     helm_release.ambassador,
