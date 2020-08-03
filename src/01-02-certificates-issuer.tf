@@ -8,7 +8,7 @@ resource "tls_cert_request" "issuer_req" {
   private_key_pem = tls_private_key.issuer_key.private_key_pem
 
   subject {
-    common_name = "identity.linkerd.cluster.local"
+    common_name = var.certificate_resource_name
   }
 }
 

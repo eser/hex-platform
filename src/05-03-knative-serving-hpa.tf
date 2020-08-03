@@ -3,5 +3,5 @@ resource "kubectl_manifest" "knative-serving-hpa" {
     kubectl_manifest.knative-serving-core
   ]
 
-  yaml_body = file("${path.module}/../../tmp/knative-serving-hpa.yaml")
+  yaml_body = file("${path.module}/../tmp/knative-serving-hpa.yaml")
 }

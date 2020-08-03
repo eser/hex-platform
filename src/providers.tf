@@ -14,3 +14,6 @@ provider "kubectl" {
 
 provider "tls" {
 }
+
+provider "null" {
+}

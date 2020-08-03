@@ -10,9 +10,7 @@ resource "tls_self_signed_cert" "trustanchor_cert" {
   is_ca_certificate     = true
 
   subject {
-    common_name = "identity.linkerd.cluster.local"
-    # common_name = var.resource_group_name
-    # common_name = "${var.resource_group_name}"
+    common_name = var.certificate_resource_name
   }
 
   allowed_uses = [

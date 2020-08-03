@@ -3,5 +3,5 @@ resource "kubectl_manifest" "knative-serving-core" {
     kubectl_manifest.knative-serving-crds
   ]
 
-  yaml_body = file("${path.module}/../../tmp/knative-serving-core.yaml")
+  yaml_body = file("${path.module}/../tmp/knative-serving-core.yaml")
 }

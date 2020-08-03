@@ -7,6 +7,13 @@ function pause(){
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 
+echo "                            "
+echo "Hex-Platform Installer      "
+echo "----------------------------"
+echo "                            "
+read -p 'Enter K8S Context Name (default is docker-desktop): ' k8s_context
+read -p 'Enter K8S Environment Name (default is playground): ' k8s_environment
+
 # Download external YAMLs
 if [ ! -f $DIR/../tmp/ambassador-operator-crds.yaml ]; then
   echo "Downloading external YAMLs..."
@@ -29,9 +36,12 @@ fi
 # Terraform Initialization
 echo "Initializing Terraform..."
 
-terraform init $DIR/../src/environments/playground/
+terraform init $DIR/../src/
 
 # Terraform Apply
 echo "Executing Terraform Apply..."
 
-terraform apply $DIR/../src/environments/playground/
+terraform apply \
+  -var k8s_context=${k8s_context:-docker-desktop} \
+  -var k8s_environment=${k8s_environment:-playground} \
+  $DIR/../src/
