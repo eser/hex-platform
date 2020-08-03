@@ -6,10 +6,6 @@ Thumbs.db
 .vscode/
 *.swp
 
-# Codebase specific
-# helm-samples/
-**/charts/*.tgz
-
 # terraform
 **/.terraform/*
 *.tfstate
