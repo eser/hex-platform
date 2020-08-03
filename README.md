@@ -33,6 +33,40 @@ $ ./bin/installer
 ```
 
 
+### Knative FaaS Sample
+
+Deploy the helloworld knative application container:
+
+```sh
+$ kubectl apply -f etc/knative-faas-sample/helloworld-service.yml
+```
+
+Then forward the port and make a request:
+
+```sh
+$ kubectl port-forward -n ambassador svc/ambassador 80
+$ curl -k -H "Host: helloworld.default.example.com" https://localhost
+```
+
+
+### Ambassador Edge Stack Dashboard
+
+Download edgectl first, and then:
+
+```sh
+$ edgectl login --namespace=ambassador --context=docker-desktop localhost
+```
+
+
+### Linkerd Dashboard
+
+Download linkerd first, and then:
+
+```sh
+$ linkerd dashboard --context docker-desktop
+```
+
+
 ## Todo List
 
 See [GitHub Projects](https://github.com/eserozvataf/hex-platform/projects) for more.

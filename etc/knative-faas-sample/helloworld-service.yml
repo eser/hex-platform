@@ -1,0 +1,16 @@
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: helloworld
+  namespace: default
+spec:
+  template:
+    metadata:
+      annotations:
+        linkerd.io/inject: enabled
+    spec:
+      containers:
+      - image: docker.io/cpretzer/helloworld-go
+        env:
+        - name: TARGET
+          value: "Hex-Platform FaaS execution sample"
